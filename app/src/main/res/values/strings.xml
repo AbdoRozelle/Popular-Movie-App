@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pop Movies</string>
+    <string name="error">Error!!</string>
+    <string name="loading">Loading…</string>
+    <string name="image">Image</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="action_add_favourite">Add to Favourites</string>
+
+    <string-array name="sort_array">
+        <item id="popularity.desc">Most Popular</item>
+        <item id="vote_average.desc">Highest Rated</item>
+        <item id="favorite">Favorites</item>
+
+    </string-array>
+</resources>
