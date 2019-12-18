@@ -24,7 +24,7 @@
             android:textSize="25sp" />
     </FrameLayout>
 
-    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/recycler_view_trailers_and_reviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

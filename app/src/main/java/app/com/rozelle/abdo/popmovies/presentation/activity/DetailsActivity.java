@@ -3,7 +3,7 @@ package app.com.rozelle.abdo.popmovies.presentation.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import app.com.rozelle.abdo.popmovies.R;
 import app.com.rozelle.abdo.popmovies.domain.Movie;

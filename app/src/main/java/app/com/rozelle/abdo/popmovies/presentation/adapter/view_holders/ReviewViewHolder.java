@@ -1,6 +1,6 @@
 package app.com.rozelle.abdo.popmovies.presentation.adapter.view_holders;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 

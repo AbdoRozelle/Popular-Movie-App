@@ -84,7 +84,7 @@ public class MovieApi {
                     .appendPath(URI_NUM3)
                     .appendPath(URI_DISCOVER)
                     .appendPath(URI_MOVIE)
-                    .appendQueryParameter(MOVIE_API_KEY, BuildConfig.MOVIE_API_KEY);
+                    .appendQueryParameter(MOVIE_API_KEY, "69b1b1f599587eb0b3df5d076c2b43e1");
             Load.loadMovies(context, callback, uri.toString());
         }
 
@@ -183,11 +183,14 @@ public class MovieApi {
                             // parse the data
                             if (result != null) {
                                 List<Movie> movies = ParseJsonRespose.parseMovieResponse(result);
-                                for (Movie movie : movies) {
-                                    String posterPath = movie.getPoster_path();
-                                    if (!posterPath.equals("null"))
-                                        movie.setPoster_path(BASE_iMAGE_URI + movie.getPoster_path());
-                                }
+                                if(movies != null) {
+                                    for (Movie movie : movies) {
+                                        String posterPath = movie.getPoster_path();
+                                        if (!posterPath.equals("null"))
+                                            movie.setPoster_path(BASE_iMAGE_URI + movie.getPoster_path());
+                                    }
+                                }else
+                                    Log.e(LOG_TAG, "result is null");
                                 progressDialog.dismiss();
                                 if (movies != null) {
                                     //movieAdapter.setData(movies);

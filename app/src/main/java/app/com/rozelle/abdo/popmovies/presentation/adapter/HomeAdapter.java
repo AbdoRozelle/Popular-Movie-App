@@ -1,13 +1,14 @@
 package app.com.rozelle.abdo.popmovies.presentation.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -58,7 +59,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MovieViewHolde
             }
         });
         // loading album cover using Glide library
-        Picasso.with(mContext).load(movie.getPoster_path()).into(holder.poster);
+        Picasso.get()
+                .load(movie.getPoster_path())
+                .placeholder(R.drawable.ic_file_download_black_24dp)
+                .error(R.drawable.ic_error_black_24dp)
+                .into(holder.poster);
     }
 
     public Observable<Movie> getPositionClicks() {

@@ -1,7 +1,9 @@
 package app.com.rozelle.abdo.popmovies.presentation.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -139,13 +141,13 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 String posterPath = movie.getPoster_path();
 
                 if (posterPath != null && !posterPath.equals("null"))
-                    Picasso.with(context)
+                    Picasso.get()
                             .load(posterPath)
                             .placeholder(R.drawable.ic_file_download_black_24dp)
                             .error(R.drawable.ic_error_black_24dp)
                             .into(headerViewHolder.imageView);
                 else
-                    headerViewHolder.imageView.setImageResource(R.drawable.image_black_placeholder);
+                headerViewHolder.imageView.setImageResource(R.drawable.image_black_placeholder);
 
                 final DatabaseHelper databaseHelper = new DatabaseHelper(context);
                 Movie mMovie = databaseHelper.getMovie(movie.getId());
